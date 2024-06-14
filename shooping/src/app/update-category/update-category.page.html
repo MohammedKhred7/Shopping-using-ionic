@@ -1,0 +1,19 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Update-Category</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+  
+<form [formGroup]="form" (ngSubmit)="submit()">
+    <ion-item>
+      <ion-input type="text"  formControlName="title" placeholder="Cateogry Title"  ></ion-input>
+    </ion-item>
+  <ion-item>
+    <ion-input type="file" (change)="upload_image($event)" placeholder="Cateogry Image"   ></ion-input>
+  </ion-item>
+  <ion-button type="submit" expand="block" color="warning">Update</ion-button>
+</form>
+
+</ion-content>

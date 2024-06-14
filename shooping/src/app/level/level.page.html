@@ -1,0 +1,38 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>level</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-row>
+    <ion-col size="6">
+      <div class="account">
+        <h5>234000$</h5>
+      </div>
+    </ion-col>
+    <ion-col size="6">
+      <h2>Ali Khaled </h2>
+      <h2>25437352222 </h2>
+    </ion-col>
+  </ion-row>
+
+  
+  <table>
+    <tr>
+      <td>id</td>
+      <td>name</td>
+      <td>age</td>
+    </tr>
+    <tr *ngFor="let std of stds" >
+      <div (click)="goToStdDetail(std)">
+        <td>{{std.id}}</td>
+        <td>{{std.name}}</td>
+        <td>{{std.age}}</td>
+      </div>
+    </tr>
+  </table>
+  <ion-button  expand="block" (click)="goToHome()">route to home</ion-button>
+  
+</ion-content>

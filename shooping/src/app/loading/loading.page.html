@@ -1,0 +1,36 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar >
+    <ion-buttons slot="start">
+      <ion-button>
+        <ion-icon name="chevron-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons >
+    <ion-buttons slot="end">
+        <h4>
+          <b>
+            skip
+          </b>
+        </h4>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+
+
+<ion-content >
+
+    <ion-slides [options]="slideOptions" pager="true" #slider (ionSlidesDidLoad)="slidesDidLoad(slider)">
+      <ion-slide *ngFor="let slide of slides " >
+        <img src="{{slide.img}}" />
+  
+        <h2>{{slide.title}}</h2>
+        <p>
+          {{slide.des}}
+        </p>
+  
+      </ion-slide>
+    </ion-slides>
+
+
+</ion-content>

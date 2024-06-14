@@ -1,0 +1,50 @@
+<div *ngIf="showSplash" class="splash">
+  <img src="assets/images/shopping.png" alt="">
+<div class="sk-chase">
+  <div class="sk-chase-dot"></div>
+  <div class="sk-chase-dot"></div>
+  <div class="sk-chase-dot"></div>
+  <div class="sk-chase-dot"></div>
+  <div class="sk-chase-dot"></div>
+  <div class="sk-chase-dot"></div>
+</div>
+</div>
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button class="backbtn" >
+      Login
+      </ion-button>
+    </ion-buttons>
+      <ion-buttons slot="end" class="filter">
+      <ion-button> 
+          <img src="assets/menu_bar.svg" alt="">
+        </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="ion-padding container">
+    <div class="menu">
+<img src="assets/images/shopping.png" alt="">
+</div>
+    <form class="form-container" [formGroup]="form" (ngSubmit)="submitLogin()">
+      <ion-item>
+        <ion-label position="floating">Email</ion-label>
+        <ion-input formControlName="email"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Password</ion-label>
+        <ion-input type="password" formControlName="password"></ion-input>
+        <ion-icon name="eye" slot="end"></ion-icon>
+      </ion-item>
+      <!-- (click)="login()" -->
+      <ion-button expand="block" class="main-button" type="submit" color="secondary" >Log in</ion-button>
+
+      <div class="sign-up">
+        Don't have an account? <ion-button  fill="clear" routerLink="/e-signup" routerDirection="forward">Sign up</ion-button>
+      </div>
+    </form>
+  </div>
+</ion-content>

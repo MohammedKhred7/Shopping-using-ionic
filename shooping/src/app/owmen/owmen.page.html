@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" class="bar">
+    <ion-title size="large" class="home">Owmen</ion-title>
+      <ion-menu-button>
+        <img src="assets/menu_bar.svg">
+      </ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="end" class="icon">
+      <ion-button class="filter">
+        <span>{{number}}</span>
+        <ion-icon name="cart-outline" ></ion-icon>
+      </ion-button>
+      <ion-button class="notification">
+        <ion-icon name="notifications-outline" ></ion-icon>
+        <span>&nbsp;</span>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+ <!-- Mans -->
+<ion-content >
+  <div class="search ion-padding">
+    <ion-item lines="none">
+      <ion-input placeholder="Search Your Product"></ion-input>
+      <ion-icon name="search-outline" slot="start"></ion-icon>
+    </ion-item>
+  </div>
+<br>
+
+        <div *ngFor="let product of listProduct;let i = index" class="category-slider">
+        <ion-row>
+        <ion-col class="ion-text-left"  >
+          <img src="http://localhost/learnify/e/{{ product.Img }}" alt="" routerLink="/item-details" routerDirection="forward">
+          <p>${{ product.Price}}</p>
+         <h6> <ion-icon name="add-circle-outline"  (click)="counter()" ></ion-icon></h6>
+            </ion-col>
+          </ion-row>
+          </div>
+</ion-content>

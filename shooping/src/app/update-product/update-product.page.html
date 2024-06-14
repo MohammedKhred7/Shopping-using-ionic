@@ -1,0 +1,22 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Update-Product</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content >
+  
+  <form [formGroup]="form" (ngSubmit)="submit()">
+      <ion-item>
+        <ion-input type="text"  formControlName="name" placeholder="Name"  ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="number"  formControlName="price" placeholder="Price"  ></ion-input>
+      </ion-item>
+    <ion-item>
+      <ion-input type="file" (change)="upload_image($event)" placeholder="Product Image"   ></ion-input>
+    </ion-item>
+    <ion-button type="submit" expand="block" color="warning">Update</ion-button>
+  </form>
+  
+  </ion-content>
+  

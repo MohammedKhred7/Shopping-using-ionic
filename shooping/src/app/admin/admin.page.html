@@ -1,0 +1,71 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-title size="large">Admin</ion-title>
+      <ion-menu-button>
+        <img src="../../assets/menu_bar.svg" />
+      </ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon name="menu-outline"></ion-icon>
+      </ion-button>
+      <ion-button>
+        <ion-icon name="options-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen="true">
+  <div class="titles">
+    <h4>
+      Management For :
+    </h4>
+  </div>
+
+  <div class="ion-padding">
+    <ion-card color="warning">
+      <div class="mask">
+        <img src="assets/cart/cart3.png">
+      </div>
+      <ion-card-content [routerLink]="['/e-users']"  >
+        <ion-row>
+          <ion-col>
+            <br>
+            <ion-card-title >Users</ion-card-title>
+          </ion-col>
+        </ion-row>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card color="primary">
+      <div class="mask">
+        <img src="assets/cart/cart3.png">
+      </div>
+      <ion-card-content [routerLink]="['/e-category']" >
+        <ion-row>
+          <ion-col>
+            <br>
+            <ion-card-title>Categories</ion-card-title>
+          </ion-col>
+        </ion-row>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card color="success">
+      <div class="mask">
+        <img src="assets/cart/cart3.png">
+      </div>
+      <ion-card-content [routerLink]="['/e-prodect']">
+        <ion-row>
+          <ion-col >
+            <br>
+            <ion-card-title>Prodects</ion-card-title>
+          </ion-col>
+        </ion-row>
+      </ion-card-content>
+    </ion-card>
+
+  </div>
+</ion-content>

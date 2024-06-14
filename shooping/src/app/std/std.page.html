@@ -1,0 +1,15 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>std</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+{{obj.name}}
+
+  <h2>upload avatar</h2>
+  <input type="file" (change)="onChangeFun($event)">
+  <ion-button expand="block" (click)="upload_image()">upload</ion-button>
+
+</ion-content>

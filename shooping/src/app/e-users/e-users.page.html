@@ -1,0 +1,58 @@
+<div *ngIf="showSplash" class="splash">
+  <div class="spinner">
+    <div class="dot1"></div>
+    <div class="dot2"></div>
+  </div>
+</div>
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-title size="large">Users</ion-title>
+      <ion-menu-button  routerLink="/welcome" routerDirection="back">
+        <img src="../../assets/menu_bar.svg" />
+      </ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button class="notification">
+        <ion-icon name="notifications-outline" color="dark"></ion-icon>
+        <span>&nbsp;</span>
+      </ion-button>
+      <ion-button class="filter">
+        <ion-icon name="funnel-outline" color="dark"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="search ion-padding">
+    <ion-item lines="none">
+      <ion-input placeholder="Search Your User"></ion-input>
+      <ion-icon name="search-outline" slot="start"></ion-icon>
+    </ion-item>
+  </div>
+
+  <div class="title ion-padding">
+    <h2>Users</h2>
+    <ion-button  color="success" routerLink="/e-signup" >Add User</ion-button>
+  </div>
+
+    <ion-card color="primary" *ngFor="let user of listUsers;let i = index">
+      <ion-card-content>
+        <ion-row>
+          <ion-col size="10">
+            <h4>#..{{user.id}}</h4>
+           <h4>Name: {{user.Name}}</h4>
+           <h4>Email: {{user.Email}}</h4>
+           <h4>password: {{user.Password}}</h4>
+          <br>
+          <ion-button class="Delet" (click)="del(i)" color="warning" >Delet</ion-button>
+            <br>
+          </ion-col>
+        </ion-row>
+      </ion-card-content>
+    </ion-card>
+
+    
+
+</ion-content>

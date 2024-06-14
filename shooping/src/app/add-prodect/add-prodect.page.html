@@ -1,0 +1,23 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Add Prodect</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <form [formGroup]="form" (ngSubmit)="submit()">
+    <ion-item>
+      <ion-input type="text"  placeholder="cateogry"  ></ion-input>
+      <select name="" formControlName="name" > 
+        <option   *ngFor="let cateogry of listCategory;let i = index"  value={{cateogry.Name}}>{{cateogry.Name}}</option>
+      </select>
+    </ion-item>
+    <ion-item>
+      <ion-input type="number" formControlName="price" placeholder="Price"  ></ion-input>
+    </ion-item>
+  <ion-item>
+    <ion-input type="file" (change)="upload_image($event)"   placeholder="Product Image"   ></ion-input>
+  </ion-item>
+  <ion-button type="submit" expand="block" color="success">Add</ion-button>
+</form>
+</ion-content>

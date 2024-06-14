@@ -1,0 +1,80 @@
+
+
+.home{
+    margin-left: 10px;
+    color: #00b6ce;
+    }
+  .filter {
+    width: 50px;
+      height: 50px;
+      margin-right: 30px;
+      span{
+        color: #ffd000;
+      }
+  }
+  .icon{
+    color: #00b6ce
+  }
+  
+  .search {
+    display: inline;
+    padding: 8px 0;
+      margin-bottom: 20px;
+  
+  
+      ion-item {
+          border-radius: 10px;
+          box-shadow: 0px 13px 30px 0px rgba(0, 0, 0, 0.09);
+          padding: 8px;
+  
+          ion-icon {
+            color: #00b6ce;
+              margin-right: 16px;
+          }
+  
+          ion-input {
+              padding-left: 10px !important;
+              border-left: 1px solid #F4F4F4;
+          }
+      }
+  }
+  
+  .category-slider {
+    margin-bottom: 30px;
+    display: inline-block;
+    padding: 1px 15px;
+    ion-row{
+          width:auto;
+          height: auto;
+          margin-right: 2px;
+          margin-left: 2px;
+  
+  
+          ion-col {
+              justify-content: center;
+              align-items: center;
+              height: 200px;
+              h6 {
+                  text-align: center;
+                color: gold;
+                font-size:30px;
+                  margin-top: -15px;
+                  margin-bottom: 0;
+              }
+  
+              img {
+                  width: 150px;
+                  height: 150px;
+                  object-fit: cover;
+                  border-radius: 8px;
+                  box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.16);
+              } 
+              p {
+                text-align: center;
+                font-size: 15px;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                margin-top: 5px;
+              }
+          }
+      }
+  }

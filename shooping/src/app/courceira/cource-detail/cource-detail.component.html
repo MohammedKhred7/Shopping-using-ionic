@@ -1,0 +1,19 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>{{obj.title}} </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-button [routerLink]="['../add-video',obj]" expand="block">add Video</ion-button>
+  <div *ngFor="let video of listVedio">
+    <video width="320" height="240" controls>
+      <source src="http://localhost/learnify/{{video.url}}" type="video/mp4">
+    
+    </video>
+  </div>
+ 
+
+
+
+</ion-content>

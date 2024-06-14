@@ -1,0 +1,21 @@
+class="ion-no-border"
+
+  <ion-buttons slot="start">
+      <ion-button>
+        <ion-icon name="chevron-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+<ion-slides [options]="slideOptions" pager="true" #slider (ionSlidesDidLoad)="slidesDidLoad(slider)">
+    <ion-slide  >
+      <img src="assets/images/slide-1.png" />
+
+      <h2>Start</h2>
+      <p>
+        first slider
+      </p>
+
+    </ion-slide>
+
+
+<ion-button expand="block" >login </ion-button>

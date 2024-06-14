@@ -1,0 +1,31 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>addUser</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">addUser</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <form [formGroup]="form" (ngSubmit)="submit()">
+    <ion-item>
+      <ion-input type="text"  placeholder="Name" formControlName="Name" name="phone" ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input type="text"  placeholder="Username" formControlName="Username" name="phone" ></ion-input>
+    </ion-item>
+    <ion-item>
+    <textarea placeholder=" Des" formControlName="Des"></textarea>
+  </ion-item>
+  <ion-item>
+    <ion-input type="file" (change)="upload_image($event)"  placeholder=" Image"   ></ion-input>
+  </ion-item>
+  <ion-button type="submit" expand="block">Add</ion-button>
+
+</form>
+
+</ion-content>

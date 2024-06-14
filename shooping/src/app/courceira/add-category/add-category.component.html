@@ -1,0 +1,23 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>addVedio</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+ <form [formGroup]="form" (ngSubmit)="submit()">
+      <ion-item>
+        <ion-input type="text"  placeholder="Cateogry Title" formControlName="title" name="phone" ></ion-input>
+      </ion-item>
+      <ion-item>
+      <textarea placeholder="Cateogry Des" formControlName="des"></textarea>
+    </ion-item>
+    <ion-item>
+      <ion-input type="file" (change)="upload_image($event)"  placeholder="Cateogry Image"   ></ion-input>
+    </ion-item>
+    <ion-button type="submit" expand="block">Add</ion-button>
+
+ </form>
+
+</ion-content>

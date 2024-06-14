@@ -1,0 +1,18 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>addVedio</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+ <form  (ngSubmit)="submit()">
+  <h4>attachment the video</h4>
+  <ion-item>
+    <ion-input type="file" (change)="upload_image($event)"  placeholder="Cateogry Image"   ></ion-input>
+  </ion-item>
+  <ion-button type="submit" expand="block">Add</ion-button>
+
+ </form>
+
+</ion-content>

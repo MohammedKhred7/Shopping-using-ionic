@@ -1,0 +1,105 @@
+<div *ngIf="showSplash" class="splash">
+  <div class="spinner">
+    <div class="dot1"></div>
+    <div class="dot2"></div>
+  </div>
+</div>
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" class="bar">
+    <ion-title size="large" class="home">home</ion-title>
+      <ion-menu-button>
+        <img src="assets/menu_bar.svg">
+      </ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="end" class="icon">
+      <ion-button class="filter">
+        <span>{{number}}</span>
+        <ion-icon name="cart-outline" ></ion-icon>
+      </ion-button>
+      <ion-button class="notification">
+        <ion-icon name="notifications-outline" ></ion-icon>
+        <span>&nbsp;</span>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="search ion-padding">
+    <ion-item lines="none">
+      <ion-input placeholder="Search Your Product"></ion-input>
+      <ion-icon name="search-outline" slot="start"></ion-icon>
+    </ion-item>
+  </div>
+
+  <div class="title ion-padding">
+    <h2>Categories</h2>
+    <ion-icon name="eye-outline"></ion-icon>
+  </div>
+   
+    <swiper-container [modules]="swiperModules" class="category-slider ion-padding-start" >
+      <swiper-slide  *ngFor="let cateogry of listCategory;let i = index">
+      <ion-col>
+        <h6>{{ cateogry.Name }}</h6>
+        <img src="http://localhost/learnify/e/{{ cateogry.Img }}" alt="" >
+          </ion-col>
+        </swiper-slide>
+      </swiper-container>
+
+    <!-- Mem -->
+  <div class="title ion-padding">
+    <h2 class="font-bold">Men</h2>
+    <ion-icon name="eye-outline" routerLink="/man"></ion-icon>
+  </div>
+ 
+      <swiper-container [modules]="swiperModules" class="product-slider ion-padding-start">
+        <swiper-slide *ngFor="let product of listProduct;let i = index">
+        <ion-row>
+        <ion-col class="ion-text-left"  >
+          <img src="http://localhost/learnify/e/{{ product.Img }}" alt="" routerLink="/item-details" routerDirection="forward">
+          <p>${{ product.Price}}</p>
+         <h6> <ion-icon name="add-circle-outline"  (click)="counter()" ></ion-icon></h6>
+        <!-- <p class="ion-no-margin rate"> -->
+            </ion-col>
+          </ion-row>
+          </swiper-slide>
+        </swiper-container>
+      <!-- Women -->
+      <div class="title ion-padding">
+        <h2 class="font-bold">Women</h2>
+        <ion-icon name="eye-outline"  routerLink="/owmen" routerDirection="forward"></ion-icon>
+      </div>
+    
+      <swiper-container [modules]="swiperModules" class="product-slider ion-padding-start">
+        <swiper-slide *ngFor="let product of listProduct;let i = index">
+        <ion-row>
+        <ion-col class="ion-text-left"  >
+          <img src="http://localhost/learnify/e/{{ product.Img }}" alt="" routerLink="/item-details" routerDirection="forward">
+           <p>${{ product.Price}}</p> 
+          <h6> <ion-icon name="add-circle-outline" (click)="counter()"></ion-icon></h6>
+        <!-- <p class="ion-no-margin rate"> -->
+            </ion-col>
+          </ion-row>
+          </swiper-slide>
+        </swiper-container>
+
+          <!-- Children -->
+          <div class="title ion-padding">
+            <h2 class="font-bold">Children</h2>
+            <ion-icon name="eye-outline"  routerLink="/man"></ion-icon>
+          </div>
+        
+          <swiper-container [modules]="swiperModules" class="product-slider ion-padding-start">
+            <swiper-slide *ngFor="let product of listProduct;let i = index">
+            <ion-row>
+            <ion-col class="ion-text-left" >
+              <img src="http://localhost/learnify/e/{{ product.Img }}" alt=""  routerLink="/item-details" routerDirection="forward">
+              <p>${{ product.Price}}</p>
+              <h6> <ion-icon name="add-circle-outline"  (click)="counter()" ></ion-icon></h6>
+            <!-- <p class="ion-no-margin rate"> -->
+                </ion-col>
+              </ion-row>
+              </swiper-slide>
+            </swiper-container>
+</ion-content>

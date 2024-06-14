@@ -1,0 +1,44 @@
+ion-header {
+    ion-toolbar {
+      --background: rgba(0,0,0,0);
+    }
+   
+  }
+  
+  ion-content {
+    h4 {
+      font-weight: bold;
+      font-size: 24px;
+    }
+    .titles {
+      padding: 0 2rem;
+    }
+    ion-card {
+  
+      overflow: visible;
+      height: 120px;
+      box-shadow: none;
+      border-radius: 8px;
+      margin: 26px 0;
+
+      .mask {
+        img {
+          width: 200px;
+          position: absolute;
+          bottom: 0px;
+          left: 140px;
+          mask-image: linear-gradient(to top, rgba(0,0,0,.1), rgba(0,0,0,0));
+        }
+      }
+  
+  
+      ion-card-title {
+        text-align:center ;
+        font-weight: 1000;
+      }
+      
+    }
+  }
+  
+  
+  
